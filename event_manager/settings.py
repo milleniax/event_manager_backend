@@ -1,9 +1,6 @@
 import os
 from _datetime import timedelta
 from celery.schedules import crontab
-from .config import EMAIL_HOST_PASSWORD, EMAIL_HOST_USER, POSTGRES_DATABASE_PASSWORD,\
-                                POSTGRES_DATABASE_USER, POSTGRES_DATABASE_NAME, SECRET_KEY
-
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -14,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY
+SECRET_KEY = ')!h2d##f2d43px5p6g(2r@yf_88tx8y5s(z)%3wx92s9ff9v&&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,9 +74,9 @@ WSGI_APPLICATION = 'event_manager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': POSTGRES_DATABASE_NAME,
-        'USER': POSTGRES_DATABASE_USER,
-        'PASSWORD': POSTGRES_DATABASE_PASSWORD,
+        'NAME': 'event_db',
+        'USER': 'event_admin',
+        'PASSWORD': 'event_manager_1',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -141,8 +138,8 @@ CELERYBEAT_SCHEDULE = {
 }
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_HOST_USER = 'abdullinmarsel31@gmail.com'
+EMAIL_HOST_PASSWORD = 'gtsxxcvtsawygzut'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
