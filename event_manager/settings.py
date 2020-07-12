@@ -16,7 +16,7 @@ SECRET_KEY = ')!h2d##f2d43px5p6g(2r@yf_88tx8y5s(z)%3wx92s9ff9v&&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eventmanagerwithdjango.herokuapp.com']
 
 
 # Application definition
