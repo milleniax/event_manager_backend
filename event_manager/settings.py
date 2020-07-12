@@ -2,6 +2,10 @@ import os
 from _datetime import timedelta
 from celery.schedules import crontab
 import dj_database_url
+import redis
+
+REDIS_DEFAULT_CONNECTION_POOL = redis.ConnectionPool.from_url(
+    os.getenv('REDIS_URL', 'redis://localhost:6379/'))
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
